@@ -117,9 +117,9 @@ FoodExpress/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/FoodExpress.git
+git clone https://github.com/MohitPal2005/Food-Delivery-App.git
 
-cd FoodExpress
+cd Food-Delivery-App
 ```
 
 ---
