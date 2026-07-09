@@ -15,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     try {
       // Sending data to your Express backend
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post('https://food-delivery-app-backend-vl08.onrender.com/api/auth/register', formData);
       alert(response.data.message);
       
       // Redirecting seamlessly to the Login page

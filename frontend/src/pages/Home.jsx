@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/menu');
+        const response = await axios.get('https://food-delivery-app-backend-vl08.onrender.com/api/menu');
         setItems(response.data);
         setLoading(false);
       } catch (error) {

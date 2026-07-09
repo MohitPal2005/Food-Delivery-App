@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     try {
       // Sending data to your Express backend
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const response = await axios.post('https://food-delivery-app-backend-vl08.onrender.com/api/auth/login', formData);
       
       // Saving the security token to browser storage
       localStorage.setItem('token', response.data.token);

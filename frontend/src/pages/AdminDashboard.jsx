@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/menu');
+      const response = await axios.get('https://food-delivery-app-backend-vl08.onrender.com/api/menu');
       setItems(response.data);
     } catch (error) {
       console.error(error);
@@ -29,11 +29,11 @@ const AdminDashboard = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/menu/${editingId}`, foodData);
+        await axios.put(`https://food-delivery-app-backend-vl08.onrender.com/api/menu/${editingId}`, foodData);
         setMessage('Food item updated successfully!');
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/api/menu', foodData);
+        await axios.post('https://food-delivery-app-backend-vl08.onrender.com/api/menu', foodData);
         setMessage('Food item added successfully!');
       }
       setFoodData({ name: '', description: '', price: '', category: '', imageUrl: '' });
@@ -59,7 +59,7 @@ const AdminDashboard = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/menu/${id}`);
+        await axios.delete(`https://food-delivery-app-backend-vl08.onrender.com/api/menu/${id}`);
         setMessage('Item deleted successfully!');
         fetchItems();
         setTimeout(() => setMessage(''), 3000);
